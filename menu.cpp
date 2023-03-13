@@ -2,9 +2,12 @@
 // Created by QUIROS CALVO on 11/3/2023.
 //
 
-#include "menu.h"
+#include "prototipos.h"
+#include "estructuras.h"
+#include <iostream>
 #include <string>
 
+BaseDeDatos *base = new BaseDeDatos();
 using namespace std;
 
 // Procedimiento que genera el menú principal en consola
@@ -36,7 +39,9 @@ void menuPrincipal(){
         switch (valSeleccion) {
             case 1:
                 cout << "Su seleccion fue: Agregar Combo" << endl;
+                base->agregarCombo();
                 cout << endl;
+
                 continue;
             case 2:
                 cout << "Su seleccion fue: Buscar Combo" << endl;
@@ -48,6 +53,7 @@ void menuPrincipal(){
                 continue;
             case 4:
                 cout << "Su seleccion fue: Imprimir todos los Combos" << endl;
+                base->imprimir();
                 cout << endl;
                 continue;
             case 5:

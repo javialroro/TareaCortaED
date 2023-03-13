@@ -6,3 +6,4 @@
 #define TAREACORTAED_PROTOTIPOS_H
 
 #endif //TAREACORTAED_PROTOTIPOS_H
+void menuPrincipal();
