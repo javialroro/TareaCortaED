@@ -1,0 +1,3 @@
+C:/Users/QUIROS CALVO/Trabajos_TEC_2023/ED_/1 Tarea Corta/CMakeFiles/1_Tarea_Corta.dir
+C:/Users/QUIROS CALVO/Trabajos_TEC_2023/ED_/1 Tarea Corta/CMakeFiles/edit_cache.dir
+C:/Users/QUIROS CALVO/Trabajos_TEC_2023/ED_/1 Tarea Corta/CMakeFiles/rebuild_cache.dir
