@@ -1,0 +1,3 @@
+C:/Users/javia/OneDrive - Estudiantes ITCR/TEC/TEC 3 Semestre/Estructuras de Datos/TareaCortaED/cmake-build-debug/CMakeFiles/TareaCortaED.dir
+C:/Users/javia/OneDrive - Estudiantes ITCR/TEC/TEC 3 Semestre/Estructuras de Datos/TareaCortaED/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/javia/OneDrive - Estudiantes ITCR/TEC/TEC 3 Semestre/Estructuras de Datos/TareaCortaED/cmake-build-debug/CMakeFiles/rebuild_cache.dir
