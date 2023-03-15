@@ -149,7 +149,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "baseDeDatos.h",
+			"path" : "estructuras.h",
 			"sourceGroupIndex" : 1
 		}
 	],
