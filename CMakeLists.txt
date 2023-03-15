@@ -9,4 +9,4 @@ add_executable(TareaCortaED
         main.cpp
         menu.cpp
         procedimientos.cpp
-        prototipos.h estructuras.h)
+        prototipos.h)
