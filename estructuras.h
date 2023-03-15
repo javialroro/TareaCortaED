@@ -3,6 +3,7 @@
 //
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 struct Componente{
@@ -71,7 +72,7 @@ struct BaseDeDatos{
             combo->listaComponentes[i] = componente;
             cout << "Desea agregar otro componente? (s/n): ";
             string respuesta;
-            cin >> respuesta;
+            cin >>respuesta;
             if (respuesta == "n"){
                 break;
             }
@@ -79,8 +80,10 @@ struct BaseDeDatos{
         for (int i = 0; i < 100; i++){
             if (listaCombos[i]->nombre == ""){
                 listaCombos[i] = combo;
+                cout << "El combo se agrego correctamente";
                 break;
             }
         }
+
     }
 };

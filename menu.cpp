@@ -12,7 +12,7 @@ using namespace std;
 
 // Procedimiento que genera el menú principal en consola
 void menuPrincipal(){
-    while (true){
+    for (;;){
         cout << "----------------> Menu Principal <----------------" << endl;
         cout << endl;
         cout << "1.......Agregar Combo" << endl;
@@ -36,49 +36,45 @@ void menuPrincipal(){
 
         //A continuacion condicionales de prueba (igual despues se modifican para que cumplan su funcion en el programa)
 
-        switch (valSeleccion) {
-            case 1:
-                cout << "Su seleccion fue: Agregar Combo" << endl;
-                base->agregarCombo();
-                cout << endl;
+        if  (valSeleccion == 1) {
 
-                continue;
-            case 2:
-                cout << "Su seleccion fue: Buscar Combo" << endl;
-                cout << endl;
-                continue;
-            case 3:
-                cout << "Su seleccion fue: Borrar Combo" << endl;
-                cout << endl;
-                continue;
-            case 4:
-                cout << "Su seleccion fue: Imprimir todos los Combos" << endl;
-                base->imprimir();
-                cout << endl;
-                continue;
-            case 5:
-                cout << "Su seleccion fue: Modificar nombre de un Combo" << endl;
-                cout << endl;
-                continue;
-            case 6:
-                cout << "Su seleccion fue: Modificar cantidad de un Componente de un combo" << endl;
-                cout << endl;
-                continue;
-            case 7:
-                cout << "Su seleccion fue: Agregar Componente a un Combo" << endl;
-                cout << endl;
-                continue;
-            case 8:
-                cout << "Su seleccion fue: Calcular para porciones" << endl;
-                cout << endl;
-                continue;
-            case 9:
-                break; // Este break solo detiene el switch
-            default:
+            base->agregarCombo();
+            cout << "Su seleccion fue: Agregar Combo" << endl;
+            cout << endl;
+            continue;
+        }else if  (valSeleccion == 2) {
+            cout << "Su seleccion fue: Buscar Combo" << endl;
+            cout << endl;
+            continue;
+        }else if  (valSeleccion == 3) {
+            cout << "Su seleccion fue: Borrar Combo" << endl;
+            cout << endl;
+            continue;
+        }else if  (valSeleccion == 4) {
+            cout << "Su seleccion fue: Imprimir todos los Combos" << endl;
+            base->imprimir();
+            cout << endl;
+            continue;
+        }else if  (valSeleccion == 5) {
+            cout << "Su seleccion fue: Modificar nombre de un Combo" << endl;
+            cout << endl;
+            continue;
+        }else if  (valSeleccion == 6) {
+            cout << "Su seleccion fue: Modificar cantidad de un Componente de un combo" << endl;
+            cout << endl;
+            continue;
+        }else if  (valSeleccion == 7) {
+            cout << "Su seleccion fue: Agregar Componente a un Combo" << endl;
+            cout << endl;
+            continue;
+        }else if  (valSeleccion == 8) {
+            cout << "Su seleccion fue: Calcular para porciones" << endl;
+            cout << endl;
+            continue;
+        }else if  (valSeleccion == 9) {
+            break; // Este break solo detiene el switch
+        }else{}
                 cout << "La opcion elegida no es valida, intente de nuevo";
                 cout << endl;
-                continue;
-        }
-        break; // Este break detiene el while
     }
 }
