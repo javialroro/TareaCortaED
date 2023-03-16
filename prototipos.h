@@ -6,3 +6,10 @@
 #define TAREACORTAED_PROTOTIPOS_H
 
 #endif //TAREACORTAED_PROTOTIPOS_H
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void menuPrincipal();
+
