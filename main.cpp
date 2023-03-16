@@ -1,7 +1,5 @@
-#include <iostream>
-#include <string>
-//#include "estructuras.h"
-#include "procedimientos.cpp"
+
+#include "prototipos.h"
 
 using namespace std;
 //
@@ -9,13 +7,10 @@ using namespace std;
 //
 int main(int argc, char** argv) {
     BaseDeDatos *base = new BaseDeDatos();
-    //base->agregarCombo();
-    //base->buscarCombo();
-    //cout << "hola" << endl;
+
     menuPrincipal();
 
     return 0;
 
-    //base->agregarCombo();
-    //base->imprimir();
+
 }
