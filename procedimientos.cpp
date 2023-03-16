@@ -1,13 +1,15 @@
 //
 // Created by javia on 09/03/2023.
 //
-//
-// Created by javia on 12/03/2023.
-//
+
+
 #include <iostream>
 #include <string>
-#include "prototipos.h"
+#include <cctype>
+
+
 using namespace std;
+
 struct Componente{
     string nombre;
     int cantidad;
@@ -46,7 +48,7 @@ struct Combo{
         }
     }
 };
-;
+
 
 struct BaseDeDatos{
     Combo *listaCombos[100];
@@ -87,11 +89,11 @@ struct BaseDeDatos{
             cin >> componente->unidad;
             combo->listaComponentes[i] = componente;
             combo->cantidadComponentes++;
-            cout << "Desea agregar otro componente? (S/N): ";
+            cout << "Desea agregar otro componente? (S=1/N=0): ";
             string respuesta;
             cin >> respuesta;
             cout <<respuesta << endl;
-            if (respuesta == "N"){
+            if (respuesta == "0"){
                 cout << "Se ha terminado de agregar los componentes" << endl;
                 break;
             }
