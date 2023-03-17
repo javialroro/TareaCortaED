@@ -3,7 +3,6 @@
 //
 
 #include "prototipos.h"
-#include "estructuras.h"
 #include <iostream>
 #include <string>
 #include "procedimientos.cpp"
@@ -13,6 +12,10 @@ using namespace std;
 string prueba(){
     cout << "hola" << endl;
     return "Hola";
+}
+int commit(){
+    cout << "hola" << endl;
+    return 0;
 }
 // Procedimiento que genera el menú principal en consola
 void menuPrincipal(){

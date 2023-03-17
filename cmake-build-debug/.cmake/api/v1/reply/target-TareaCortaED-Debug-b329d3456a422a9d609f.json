@@ -117,8 +117,7 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				3,
-				4
+				3
 			]
 		}
 	],
@@ -145,11 +144,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "prototipos.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "estructuras.h",
 			"sourceGroupIndex" : 1
 		}
 	],
