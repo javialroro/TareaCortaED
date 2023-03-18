@@ -1,11 +1,10 @@
 //
 // Created by javia on 09/03/2023.
 //
-//
-// Created by javia on 12/03/2023.
-//
+
 #include <iostream>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
@@ -60,13 +59,27 @@ struct BaseDeDatos {
     void imprimir() {
         cout << "----------------- IMPRIMIR -----------------";
         cout << endl;
+        if (!listaComboVacia()) {
+            for (int i = 0; i < cantidadCombos; i++) {
+                cout << "-------> COMBO " << i+1 << " <-------" << endl;
+                cout << "-------------------------"<< endl;
+                if (listaCombos[i]->nombre != "") {
+                    listaCombos[i]->imprimir();
+                }
+            }
+        }else {
+            cout << "No hay combos" << endl;
+        }
+    }
+
+    // Procedimiento auxiliar para facilitar la validación en algunos casos.
+    bool listaComboVacia(){
         for (int i = 0; i < cantidadCombos; i++) {
-            if (listaCombos[i]->nombre != "") {
-                listaCombos[i]->imprimir();
-            } else {
-                cout << "No hay combos" << endl;
+            if (listaCombos[i]->nombre != ""){
+                 return false;
             }
         }
+        return true;
     }
 
     // Procedimiento auxiliar para mejorar eficiencia.
@@ -245,7 +258,7 @@ struct BaseDeDatos {
             if (indCombo != -1) {
                 cout << endl;
                 string nombreComp;
-                cout << "Ingrese el nombre del componente que desea modificar: ";
+                cout << "Ingrese el nombre del componente que desea agregar: ";
                 cin >> nombreComp;
                 if (buscarComponenteIndex(listaCombos[indCombo], nombreComp) == -1) {
                     Componente *componente = new Componente();
@@ -280,7 +293,6 @@ struct BaseDeDatos {
         for (int i = 0; i < combo->cantidadComponentes; i++) {
             if (combo->listaComponentes[i]->nombre != "") {
                 combo->listaComponentes[i]->imprimir();
-
             }
         }
     }
@@ -301,18 +313,26 @@ struct BaseDeDatos {
                     listaCombos[indCombo]->imprimir();
                     break;
                 } else{
+                    cout << endl;
                     cout << "---> Combo Calculado <---" << endl;
                     cout << "Nombre: " << listaCombos[indCombo]->nombre << endl;
                     cout << "Cantidad de porciones: " << listaCombos[indCombo]->cantidadPorciones << endl;
                     cout << "Componentes: " << endl;
                     cout << "-------------------------"<< endl;
                     int i = 0;
-                    while(i < porcionesRequeridas/listaCombos[indCombo]->cantidadPorciones){
+                    int vecesCombo;
+                    // Calculo de porciones.
+                    vecesCombo = static_cast<int>(std::ceil(static_cast<double>(porcionesRequeridas) /
+                                                            static_cast<double>(listaCombos[indCombo]->cantidadPorciones)));
+                    while(i < vecesCombo){
                         cout << "----------> " << i+1 << " <----------" << endl;
                         cout << "-------------------------"<< endl;
                         imprimirComponentes(listaCombos[indCombo]);
                         i++;
                     }
+                    cout << endl;
+                    cout << "Se necesitan " << vecesCombo << " veces el combo seleccionado para cumplir con " << porcionesRequeridas << " porciones" << endl;
+                    cout << endl;
                     break;
                 }
             } else {

@@ -17,6 +17,10 @@ void menuPrincipal();
 // Procedimiento que despliega todos los combos en base de datos
 void imprimir();
 
+// Procedimiento para evaluar si hay combos en la base de datos,
+// retorna true si esta vacia y false en caso contrario.
+bool listaComboVacia();
+
 // Procedimiento que busca un combo en la base de datos por su nombre
 // en caso de ser encontrado retorna su indice, en caso contrario retorna -1
 int buscarComboIndex (string comboBuscado);
@@ -43,6 +47,9 @@ void modificarCantComponentes ();
 
 // Procedimiento que permite agregar componente a un combo.
 void agregarComponente ();
+
+// Procedimiento que imprime solo los componentes de un combo.
+void imprimirComponentes (Combo *combo);
 
 // Procedimiento que selecciona un combo con sus respectivas porciones y calcula cuantos combos
 // se necesitan para satisfacer n cantidad de porciones.
