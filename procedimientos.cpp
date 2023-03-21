@@ -61,9 +61,9 @@ struct BaseDeDatos {
         cout << endl;
         if (!listaComboVacia()) {
             for (int i = 0; i < cantidadCombos; i++) {
-                cout << "-------> COMBO " << i+1 << " <-------" << endl;
-                cout << "-------------------------"<< endl;
                 if (listaCombos[i]->nombre != "") {
+                    cout << "-------> COMBO " << i+1 << " <-------" << endl;
+                    cout << "-------------------------"<< endl;
                     listaCombos[i]->imprimir();
                 }
             }
@@ -249,7 +249,7 @@ struct BaseDeDatos {
 
     void agregarComponente() {
         while (true) {
-            cout << "----------- MODIFICAR CANTIDAD COMPONENTE -----------";
+            cout << "----------- AGREGAR COMPONENTE -----------";
             cout << endl;
             string combo;
             cout << "Ingrese el nombre del combo que desea modificar: ";
